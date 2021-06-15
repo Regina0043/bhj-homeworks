@@ -1,0 +1,25 @@
+body{
+	margin: 0;
+}
+
+@font-face{
+	font-family: 'Impact';
+	src: url(../fonts/ImpactRegular.ttf);
+}
+
+.bg-img{
+	font-family: 'Impact';
+	color: #fff;
+	-webkit-text-stroke: #000;
+	background-image: url(../img/tony-stark.jpg);
+	background-repeat: no-repeat;
+	background-position:top;
+	background-size: cover;
+	width: 70%;
+	padding-top: 500px;
+	margin-top: 7%;
+	margin-left: 15%;
+	font-size: 60px;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
+}
