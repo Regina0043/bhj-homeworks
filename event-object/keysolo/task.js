@@ -4,6 +4,7 @@ class Game {
     this.wordElement = container.querySelector('.word');
     this.winsElement = container.querySelector('.status__wins');
     this.lossElement = container.querySelector('.status__loss');
+    this.time = container.querySelector('.time');
 
     this.reset();
 
@@ -24,7 +25,19 @@ class Game {
       В случае правильного ввода слова вызываем this.success()
       При неправильном вводе символа - this.fail();
      */
-  }
+
+        document.addEventListener('keydown', (evt) =>{
+
+          if(this.currentSymbol.textContent.toLowerCase() === String.fromCharCode(evt.keyCode).toLowerCase()){
+            this.success();
+          } 
+  
+          else{
+            this.fail();
+          }
+  
+        });
+}
 
   success() {
     this.currentSymbol.classList.add('symbol_correct');
