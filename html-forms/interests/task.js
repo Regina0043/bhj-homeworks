@@ -34,8 +34,7 @@ function walk(root, callback){
       
 
       const inputs = interestsMain.getElementsByTagName('input');
-
-
+      
          for (let input of inputs){
             const previousElement = root.parentElement.parentElement.parentElement.previousElementSibling;
             console.log(input.parentElement === previousElement);
