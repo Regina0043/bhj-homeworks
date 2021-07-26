@@ -14,9 +14,7 @@ function walk(root, callback){
    if(root.type ==='checkbox'){
       callback(root);
       const next = root.parentElement.nextElementSibling;
-   
-      
-      
+  
       if(next && next.classList.contains('interests_active')){
          const children = next.getElementsByTagName('input');
          for(let i = 0; i < children.length; i++){
@@ -30,12 +28,8 @@ function walk(root, callback){
                else if (!root.checked && children[i].checked === true){
                   children[i].checked = false;
                }
-    
-            
             });
-
          }
-      
       }
       
 
@@ -50,8 +44,6 @@ function walk(root, callback){
           if(root.parentElement.parentElement.parentElement.classList.contains('interests_active') && root.checked){
              if(!input.parentElement.parentElement.parentElement.classList.contains('interests_active')  && input.parentElement === previousElement && input.checked === false){
                input.checked = true;
-
-               
              }
 
              else {
@@ -59,19 +51,11 @@ function walk(root, callback){
              }
           } 
          }
-
-
-          
-      
-      
    }
 
 }
 
 let kids = interestsMain.getElementsByTagName('input');
-
-
-
 
 function kidsChecked () {
    for (let k = 0; k < kids.length; k++){
